@@ -59,7 +59,7 @@ jobs:
       - name: Package
         run: bash scripts/package-linux.sh "$VERSION" ${{ matrix.arch }} publish dist
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: packages-${{ matrix.arch }}
           path: dist/*
